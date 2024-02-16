@@ -1,0 +1,40 @@
+.sort {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: 8px;
+  line-height: 24px;
+}
+
+.sort__label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sort__select-wrapper {
+  display: flex;
+}
+
+.sort__select {
+  min-width: 165px;
+  box-sizing: border-box;
+  font-family: $font-family-montserrat;
+  line-height: 24px;
+  font-weight: 600;
+  color: $color-base-primary;
+  text-align: right;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .sort {
+    column-gap: 10px;
+  }
+}

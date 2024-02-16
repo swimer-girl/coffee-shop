@@ -1,0 +1,130 @@
+.footer {
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas:
+      "wrapper nav"
+      "copyright copyright";
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.footer__wrapper {
+  padding: 21px 26px 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $color-base-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 40px;
+    grid-area: wrapper;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.footer__logo {
+  cursor: default;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.footer__logo-image {
+  width: 82px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+      width: 170px;
+  }
+}
+
+.footer__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin: 0;
+    margin-bottom: 58px;
+    color: $color-base-black;
+    line-height: 20px;
+    text-decoration: none;
+
+    font: {
+      size: 14px;
+      family: $font-family-montserrat;
+    }
+  }
+}
+
+.footer__copyright-link {
+  position: relative;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width: 280px;
+  margin: 0 auto;
+  text-decoration: none;
+  text-transform: none;
+  text-align: left;
+  color: $color-base-gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 16px;
+    mask-image: url("../../images/icons/stack.svg#logo-academy");
+    mask-repeat: no-repeat;
+    mask-size: 12px 16px;
+    mask-position: center;
+    background-color: rgba(189, 189, 189, 1);
+    top: 22px;
+    right: 11px;
+  }
+
+  &:hover {
+    color: rgba(120, 89, 207, 1);
+    fill: rgba(120, 89, 207, 1);
+  }
+
+  &:focus {
+    color: rgba(120, 89, 207, 1);
+    fill: rgba(120, 89, 207, 1);
+  }
+
+  &:active {
+    color: rgba(89, 60, 172, 1);
+    fill: rgba(89, 60, 172, 1);
+  }
+
+  &:disabled {
+    color: rgba(226, 226, 226, 1);
+    fill: rgba(226, 226, 226, 1);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 16px;
+    width: 223px;
+    grid-column: 1/4;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: 223px;
+    grid-column: 2/4;
+  }
+}
+

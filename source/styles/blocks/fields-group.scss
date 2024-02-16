@@ -1,0 +1,68 @@
+.fields-group {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  border: none;
+}
+
+.fields-group__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.fields-group__slider {
+  margin: 0;
+  padding: 0;
+}
+
+.fields-group--range .fields-group__inputs-wrapper {
+  display: grid;
+  grid-template-columns: minmax(87px, 1fr) 8px minmax(87px, 1fr);
+  align-items: center;
+  column-gap: 20px;
+}
+
+.fields-group__separator {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+  height: 2px;
+  background-color: $color-base-gray;
+  border: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .fields-group {
+    &--range {
+      row-gap: 24px;
+    }
+
+    &--margin {
+      margin-bottom: 4px;
+    }
+  }
+
+  .fields-group--range .fields-group__inputs-wrapper {
+    column-gap: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields-group {
+    &--range {
+      row-gap: 22px;
+    }
+  }
+
+  .fields-group--range .fields-group__inputs-wrapper {
+    grid-template-columns: minmax(87px, 1fr) 10px minmax(87px, 1fr);
+  }
+}

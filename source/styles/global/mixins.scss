@@ -1,0 +1,19 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin flag {
+  display: block;
+  margin: 0 auto;
+  font-family: $font-family-montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-base-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+  text-align: center;
+}
+

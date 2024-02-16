@@ -1,0 +1,88 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.pagination__item {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pagination__link {
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color-base-primary;
+  text-decoration: none;
+  text-align: center;
+  background-color: $color-base-white;
+  cursor: pointer;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-base-white;
+    background-color: $color-alt-primary-lighter;
+  }
+
+  &:active {
+    color: $color-base-white;
+    background-color: $color-alt-primary-darker;
+  }
+
+  &:disabled {
+    color: $color-base-white;
+    background-color: $color-alt-light-grey;
+  }
+}
+
+.pagination__item--current .pagination__link {
+  font-weight: 600;
+  color: $color-base-black;
+  background: none;
+  cursor: default;
+}
+
+.pagination__link-icon {
+  padding: 0 3px 0 1px;
+  display: none;
+  fill: currentColor;
+}
+
+.pagination__item--next .pagination__link-icon {
+  transform: rotate(180deg);
+}
+
+.pagination__link-text {
+  margin: 0 12px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .pagination__link-icon {
+    display: block;
+  }
+
+  .pagination__link-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}

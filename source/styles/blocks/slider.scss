@@ -1,0 +1,148 @@
+.slider {
+  width: 100%;
+}
+
+.slider__wrapper {
+  align-items: stretch;
+}
+
+.slider-button__wrapper {
+  margin: 0 auto;
+  min-width: $mobile-width;
+  max-width: $desktop-width + 160px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slider-button {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  color: $color-base-primary;
+  border: none;
+  background-color: transparent;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &:disabled {
+    color: $color-base-gray;
+    background: none;
+    opacity: 1;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .slider-prev-svg,
+  .slider-next-svg {
+    padding-left: 4px;
+    padding-right: 5px;
+    width: 20px;
+    box-sizing: border-box;
+    fill: currentColor;
+  }
+}
+
+.slider-arrow-prev,
+.slider-arrow-next {
+  width: 11px;
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+  }
+}
+
+.slider-arrow-next .slider-prev-svg {
+  transform: rotate(180deg);
+}
+
+.slider .slider__toggles {
+  display: none;
+  height: 24px;
+  bottom: 60px;
+}
+
+.swiper-pagination-bullet {
+  padding: 10px 0;
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  background-color: $color-base-white;
+  background-clip: content-box;
+  opacity: 1;
+  transition: background-color 0.2s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-alt-opacity;
+  }
+
+  &:active {
+    background-color: $color-base-primary;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-base-primary;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    padding-bottom: 188px;
+  }
+
+  .slider-button {
+    margin-bottom: 188px;
+    padding: 0 30px;
+
+    &--prev {
+      &:hover,
+      &:focus-visible {
+        background: linear-gradient(90deg, $color-base-white 0%, $color-base-black 100%);
+      }
+
+      &:active {
+        background: linear-gradient(90deg, $color-alt-opacity 0%, $color-base-black 100%);
+      }
+    }
+
+    &--next {
+      &:hover,
+      &:focus-visible {
+        background: linear-gradient(-90deg, $color-base-white 0%, $color-base-black 100%);
+      }
+
+      &:active {
+        background: linear-gradient(-90deg, $color-alt-opacity 0%, $color-base-black 100%);
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    padding-bottom: 0;
+  }
+
+  .slider-button {
+    margin-bottom: 0;
+  }
+
+  .slider {
+    display: block;
+  }
+}

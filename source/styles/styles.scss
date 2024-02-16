@@ -2,6 +2,23 @@
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/mixins.scss";
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/form.scss";
+@import "./blocks/field.scss";
+@import "./blocks/fields-group.scss";
+@import "./blocks/filter-range.scss";
+@import "./blocks/sort-catalog.scss";
+@import "./blocks/card-list.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/footer-nav.scss";
