@@ -136,13 +136,10 @@
 @media (min-width: $desktop-width) {
   .slider {
     padding-bottom: 0;
+    display: block;
   }
 
   .slider-button {
     margin-bottom: 0;
-  }
-
-  .slider {
-    display: block;
   }
 }

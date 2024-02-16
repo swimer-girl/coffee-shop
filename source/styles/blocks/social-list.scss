@@ -10,7 +10,6 @@
     margin-left: 10px;
     width: 140px;
   }
-
 }
 
 .social-list__link {
@@ -44,6 +43,7 @@
 .social-list__link-pinterest {
   width: 22px;
   height: 22px;
+  mask-image: url(../../images/icons/stack.svg#icon-pinterest);
 }
 
 .social-list__link-ok {
@@ -53,8 +53,3 @@
 .social-list__link-vk {
   mask-image: url(../../images/icons/stack.svg#icon-vk);
 }
-
-.social-list__link-pinterest {
-  mask-image: url(../../images/icons/stack.svg#icon-pinterest);
-}
-
