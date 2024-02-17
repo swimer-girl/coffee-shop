@@ -72,8 +72,8 @@
   column-gap: 20px;
 }
 
-.promo-card-price__old,
-.promo-card-price__new {
+.promo-price__old,
+.promo-price__new {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -82,14 +82,14 @@
   vertical-align: middle;
 }
 
-.promo-card-price__old {
+.promo-price__old {
   font-size: 16px;
   font-weight: 400;
   color: $color-base-primary;
   text-decoration: line-through;
 }
 
-.promo-card-price__new {
+.promo-price__new {
   font-size: 20px;
   font-weight: 600;
 }

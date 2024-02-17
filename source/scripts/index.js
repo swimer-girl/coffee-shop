@@ -1,7 +1,7 @@
 /* в этот файл добавляет скрипты*/
 
-const navMain = document.querySelector('.header-menu__wrapper');
-const navToggle = document.querySelector('.header-nav__toggle');
+const navMain = document.querySelector('.header__wrapper');
+const navToggle = document.querySelector('.header-nav__button');
 const filterRange = document.querySelector('.filter-range');
 
 navMain.classList.remove('header-nav--no-js');
