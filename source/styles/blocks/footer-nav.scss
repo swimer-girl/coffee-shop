@@ -146,26 +146,24 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-
-    span {
-      padding-bottom: 0;
-      width: 204px;
-      line-height: 20px;
-
-      font: {
-        family: $font-family-montserrat;
-        size: 14px;
-      }
-
-    @media (min-width: $tablet-width) {
-      padding-bottom: 15px;
-      width: 100%;
-    }
-    }
   }
 
   @media (min-width: $desktop-width) {
     justify-content: flex-start;
+  }
+}
+
+.footer__nav-address {
+  padding-bottom: 0;
+  width: 204px;
+  line-height: 20px;
+  font-family: $font-family-montserrat;
+  font-size: 14px;
+  text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 15px;
+    width: 100%;
   }
 }
 
